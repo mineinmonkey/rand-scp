@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['Random SCP Page.pyw'],
-             pathex=['C:\\Users\\zachm\\Desktop\\New folder'],
+             pathex=['C:\\Users\\zachm\\PycharmProjects\\rand-scp'],
              binaries=[],
              datas=[],
              hiddenimports=[],
@@ -19,19 +19,15 @@ pyz = PYZ(a.pure, a.zipped_data,
              cipher=block_cipher)
 exe = EXE(pyz,
           a.scripts,
+          a.binaries,
+          a.zipfiles,
+          a.datas,
           [],
-          exclude_binaries=True,
           name='Random SCP Page',
           debug=False,
           bootloader_ignore_signals=False,
           strip=False,
           upx=True,
-          console=False , icon='SCP_Logo.ico')
-coll = COLLECT(exe,
-               a.binaries,
-               a.zipfiles,
-               a.datas,
-               strip=False,
-               upx=True,
-               upx_exclude=['vcruntime140.dll'],
-               name='Random SCP Page')
+          upx_exclude=['vcruntime140.dll'],
+          runtime_tmpdir=None,
+          console=False , icon='Random SCP Page.ico')
