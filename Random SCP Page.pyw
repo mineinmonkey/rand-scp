@@ -12,8 +12,8 @@ layout = [
 window = sg.Window('Random SCP Page', no_titlebar=True, grab_anywhere=True, keep_on_top=True).Layout(layout)
 
 
-def scpURL(scpNum):
-    open('www.scp-wiki.com/scp-' + scpNum)
+def scp_url(scp_num):
+    open('www.scp-wiki.com/scp-' + scp_num)
 
 
 while True:
@@ -28,7 +28,7 @@ while True:
             anyRandNum = '0' + anyRandNum
         elif len(anyRandNum) == 1:
             anyRandNum = '00' + anyRandNum
-        scpURL(anyRandNum)
+        scp_url(anyRandNum)
     else:
         seriesRandNum = str(randrange(1, 1000))
         trueSeries = 0
@@ -40,6 +40,6 @@ while True:
             seriesRandNum = '0' + seriesRandNum
         if not series[1]:
             seriesRandNum = trueSeries + seriesRandNum
-        scpURL(seriesRandNum)
+        scp_url(seriesRandNum)
 
 window.Close()
