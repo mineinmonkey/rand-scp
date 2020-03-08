@@ -15,6 +15,7 @@ window = sg.Window('Random SCP Page', no_titlebar=True, grab_anywhere=True, keep
 def scp_url(scp_num):
     open('www.scp-wiki.com/scp-' + scp_num)
 
+
 while True:
     button, series = window.Read()
 
